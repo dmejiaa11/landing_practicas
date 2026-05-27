@@ -698,6 +698,41 @@ footer {
     margin-left: 6px;
 }
 
+.news-paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.pag-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #dde3da;
+    background: white;
+    font-size: 18px;
+    cursor: pointer;
+    color: #2d2d2d;
+}
+
+.pag-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #dde3da;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+    color: #2d2d2d;
+}
+
+.pag-activo {
+    background: #8aad6e;
+    border-color: #8aad6e;
+    color: white;
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: block;
@@ -811,6 +846,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+    margin-bottom: 50px;
 }
 
 .news-caja {

@@ -18,7 +18,7 @@
             <nav aria-label="Navegación principal">
                 <ul class="nav-links" id="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="#">Gallery</a></li>
                     <li><a href="news.html" class="activo" aria-current="page">News</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -31,11 +31,11 @@
 
     <main>
 
-        <section class="hero-pagina" aria-label="Cabecera de noticias">
+       <section class="hero-pagina">
             <div class="hero-pagina-fondo" style="background-image: url('assets/images/hero.png'); background-size: cover; background-position: center;"></div>
             <div class="hero-pagina-contenido">
                 <h1>News</h1>
-                <nav aria-label="Ruta de navegación">
+                <nav>
                     <a href="index.html">Home</a> › News
                 </nav>
             </div>
@@ -115,38 +115,42 @@
                         </div>
                     </div>
                 </article>
-
             </div>
+
+            <div class="news-paginacion" aria-label="Paginación">
+                <button class="pag-btn" aria-label="Página anterior">‹</button>
+                <button class="pag-num">1</button>
+                <button class="pag-num pag-activo" aria-current="page">2</button>
+                <button class="pag-num">3</button>
+                <button class="pag-btn" aria-label="Página siguiente">›</button>
+            </div>
+
         </section>
 
     </main>
 
-    <footer>
-        <div class="footer-grid">
-            <div>
-                <h4>Address</h4>
-                <p>742 Evergreen Terrace<br>Brooklyn, NY 11201</p>
-            </div>
-            <div style="text-align:center;">
-                <a href="index.html" class="logo" style="color:white;" aria-label="Homely - Ir a inicio">⌂ homely</a>
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook">f</a>
-                    <a href="#" aria-label="Instagram">ig</a>
-                    <a href="#" aria-label="Twitter">tw</a>
-                    <a href="#" aria-label="YouTube">yt</a>
-                </div>
-            </div>
-            <div style="text-align:right;">
-                <h4>Contact Us</h4>
-                <p>T. (+1) 234-5678</p>
-                <p>M. contact@homely.com</p>
+<footer>
+    <div class="footer-grid">
+        <div style="text-align:center;">
+            <h4>Address</h4>
+            <p>742 Evergreen Terrace<br>Brooklyn, NY 11201</p>
+        </div>
+        <div style="text-align:center;">
+            <a href="index.html" class="logo" style="color:white;" aria-label="Homely - Ir a inicio">⌂ homely</a>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">ig</a>
+                <a href="#" aria-label="Twitter">tw</a>
+                <a href="#" aria-label="YouTube">yt</a>
             </div>
         </div>
-        <div class="footer-inferior">
-            <p>Copyright 2026 - Homely by Designesia</p>
+        <div style="text-align:center;">
+            <h4>Contact Us</h4>
+            <p>T. (+1) 234-5678</p>
+            <p>M. contact@homely.com</p>
         </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    </div>
+    <div class="footer-inferior">
+        <p>Copyright 2026 - Homely by Designesia</p>
+    </div>
+</footer>
