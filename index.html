@@ -101,28 +101,28 @@
                     </div>
                 </article>
                 <article class="fac-caja fac-ancha">
+                    <div>
+                        <h3>Swimming Pool</h3>
+                        <p>A beautifully designed pool that offers a relaxing, peaceful ambiance.</p>
+                    </div>
                     <div
                         class="fac-imagen"
                         role="img"
                         aria-label="Swimming Pool: piscina exterior con jardín"
                         style="background-image: url('assets/images/piscina.png'); background-size: cover; background-position: center;"
                     ></div>
-                    <div>
-                        <h3>Swimming Pool</h3>
-                        <p>A beautifully designed pool that offers a relaxing, peaceful ambiance.</p>
-                    </div>
                 </article>
                 <article class="fac-caja fac-ancha">
+                    <div>
+                        <h3>Home Security</h3>
+                        <p>Protect your home with advanced security features that offer continuous monitoring.</p>
+                    </div>
                     <div
                         class="fac-imagen"
                         role="img"
                         aria-label="Home Security: cámara de seguridad inteligente"
                         style="background-image: url('assets/images/seguridad.png'); background-size: cover; background-position: center;"
                     ></div>
-                    <div>
-                        <h3>Home Security</h3>
-                        <p>Protect your home with advanced security features that offer continuous monitoring.</p>
-                    </div>
                 </article>
             </div>
         </section>
@@ -245,25 +245,24 @@
                     <form id="formulario-contacto" novalidate aria-label="Formulario de reserva de visita">
                         <div class="fila-formulario">
                             <div class="campo">
-                                <!-- Label visible asociado al input -->
-                                <label for="nombre">Your Name</label>
+                                <label for="nombre"></label>
                                 <input type="text" id="nombre" name="nombre" placeholder="Your Name" aria-required="true">
                                 <span class="error-texto" id="error-nombre" role="alert" aria-live="polite"></span>
                             </div>
                             <div class="campo">
-                                <label for="email">Your Email</label>
+                                <label for="email"></label>
                                 <input type="email" id="email" name="email" placeholder="Your Email" aria-required="true">
                                 <span class="error-texto" id="error-email" role="alert" aria-live="polite"></span>
                             </div>
                         </div>
                         <div class="fila-formulario">
                             <div class="campo">
-                                <label for="fecha">Preferred Date</label>
+                                <label for="fecha"></label>
                                 <input type="date" id="fecha" name="fecha" value="2026-04-27" aria-required="true">
                                 <span class="error-texto" id="error-fecha" role="alert" aria-live="polite"></span>
                             </div>
                             <div class="campo">
-                                <label for="hora">Preferred Time</label>
+                                <label for="hora"></label>
                                 <select id="hora" name="hora" aria-required="true">
                                     <option value="09:00">09:00</option>
                                     <option value="10:00" selected>10:00</option>
@@ -276,7 +275,7 @@
                             </div>
                         </div>
                         <div class="campo">
-                            <label for="mensaje">Message</label>
+                            <label for="mensaje"></label>
                             <textarea id="mensaje" name="mensaje" placeholder="Tell us your preferred date, time, or any questions" rows="4"></textarea>
                         </div>
                         <button type="submit" class="boton-verde">Request a Visit</button>
