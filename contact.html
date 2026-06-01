@@ -1,48 +1,58 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homely - Contact</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Homely – Contact us to schedule a visit to this modern residence at 742 Evergreen Terrace, Brooklyn, NY.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact – Homely | Brooklyn, NY</title>
 </head>
 <body>
 
-    <header id="header">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header id="header" role="banner">
         <div class="nav-contenedor">
-            <a href="index.html" class="logo">⌂ homely</a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="contact.html" class="activo">Contact</a></li>
-            </ul>
+            <a href="index.html" class="logo" aria-label="Homely – Go to homepage">⌂ homely</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
             <a href="contact.html" class="boton-verde">Schedule Visit</a>
-            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-links">☰</button>
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">☰</button>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
 
-        <section class="hero-pagina">
-            <div class="hero-pagina-fondo" style="background-image: url('assets/images/hero.png'); background-size: cover; background-position: center;"></div>
+        <section class="hero-pagina" aria-label="Page header">
+            <div class="hero-pagina-fondo" style="background-image: url('assets/images/hero.png'); background-size: cover; background-position: center;" role="img" aria-label="Exterior view of the property"></div>
             <div class="hero-pagina-contenido">
                 <h1>Contact</h1>
-                <nav>
-                    <a href="index.html">Home</a> › Contact
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li aria-current="page">Contact</li>
+                    </ol>
                 </nav>
             </div>
         </section>
 
-        <section class="seccion-formulario">
+        <section class="seccion-formulario" aria-labelledby="contact-form-heading">
             <div class="formulario-layout">
 
                 <div class="formulario-izquierda">
+                    <h2 id="contact-form-heading" class="sr-only">Contact form</h2>
                     <p>Interested in this property or ready to see it in person? Send us your request and we'll arrange a visit at your convenience.</p>
                     <div style="display:flex; align-items:center; gap:12px; margin-top:20px;">
-                        <div class="foto-agente"></div>
+                        <div class="foto-agente" role="img" aria-label="Photo of agent Emily Rodriguez"></div>
                         <div>
                             <b>Emily Rodriguez</b><br>
                             <span style="color:#8aad6e; font-size:14px;">(+1) 234-5678</span>
@@ -51,29 +61,29 @@
                 </div>
 
                 <div class="formulario-derecha">
-                    <form id="formulario-contacto">
+                    <form id="formulario-contacto" novalidate>
 
                         <div class="fila-formulario">
                             <div class="campo">
-                                <label for="nombre"></label>
-                                <input type="text" id="nombre" name="nombre" placeholder="Your Name">
-                                <span class="error-texto" id="error-nombre"></span>
+                                <label for="nombre">Your Name</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Your Name" aria-required="true" autocomplete="name">
+                                <span class="error-texto" id="error-nombre" role="alert" aria-live="polite"></span>
                             </div>
                             <div class="campo">
-                                <label for="email"></label>
-                                <input type="email" id="email" name="email" placeholder="Your Email">
-                                <span class="error-texto" id="error-email"></span>
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email" aria-required="true" autocomplete="email">
+                                <span class="error-texto" id="error-email" role="alert" aria-live="polite"></span>
                             </div>
                         </div>
 
                         <div class="fila-formulario">
                             <div class="campo">
-                                <label for="fecha"></label>
-                                <input type="date" id="fecha" name="fecha" value="2026-04-27">
-                                <span class="error-texto" id="error-fecha"></span>
+                                <label for="fecha">Preferred Date</label>
+                                <input type="date" id="fecha" name="fecha" value="2026-04-27" aria-required="true">
+                                <span class="error-texto" id="error-fecha" role="alert" aria-live="polite"></span>
                             </div>
                             <div class="campo">
-                                <label for="hora"></label>
+                                <label for="hora">Preferred Time</label>
                                 <select id="hora" name="hora">
                                     <option value="09:00">09:00</option>
                                     <option value="10:00" selected>10:00</option>
@@ -87,12 +97,12 @@
                         </div>
 
                         <div class="campo">
-                            <label for="mensaje"></label>
+                            <label for="mensaje">Message</label>
                             <textarea id="mensaje" name="mensaje" placeholder="Tell us your preferred date, time, or any questions" rows="4"></textarea>
                         </div>
 
                         <button type="submit" class="boton-verde">Request a Visit</button>
-                        <span class="error-texto" id="exito-msg"></span>
+                        <span class="error-texto" id="exito-msg" role="alert" aria-live="polite"></span>
 
                     </form>
                 </div>
@@ -102,31 +112,36 @@
 
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-grid">
             <div style="text-align: center;">
-                <h4>Address</h4>
-                <p>742 Evergreen Terrace<br>Brooklyn, NY 11201</p>
+                <h2 class="footer-heading">Address</h2>
+                <address>742 Evergreen Terrace<br>Brooklyn, NY 11201</address>
             </div>
             <div style="text-align:center;">
-                <a href="index.html" class="logo" style="color:white;">⌂ homely</a>
-                <div class="footer-social">
-                    <a href="#">f</a>
-                    <a href="#">ig</a>
-                    <a href="#">tw</a>
-                    <a href="#">yt</a>
-                </div>
+                <a href="index.html" class="logo" style="color:white;" aria-label="Homely – Go to homepage">⌂ homely</a>
+                <nav aria-label="Social media links">
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">ig</a>
+                        <a href="#" aria-label="Twitter / X">tw</a>
+                        <a href="#" aria-label="YouTube">yt</a>
+                    </div>
+                </nav>
             </div>
             <div style="text-align:center;">
-                <h4>Contact Us</h4>
-                <p>T. (+1) 234-5678</p>
-                <p>M. contact@homely.com</p>
+                <h2 class="footer-heading">Contact Us</h2>
+                <address>
+                    <p>T. (+1) 234-5678</p>
+                    <p>M. <a href="mailto:contact@homely.com" style="color:inherit;">contact@homely.com</a></p>
+                </address>
             </div>
         </div>
         <div class="footer-inferior">
-            <p>Copyright 2026 – Homely by Designesia</p>
+            <p><small>Copyright &copy; 2026 – Homely by Designesia</small></p>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

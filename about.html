@@ -1,87 +1,94 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Homely - Tu próximo hogar perfecto">
+    <meta name="description" content="Homely – About the property. Learn about the features, floorplans, and facilities of this modern residence in Brooklyn, NY.">
     <meta name="keywords" content="Casa, Inmobiliaria, Hogar, Homely">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Homely</title>
+    <title>About – Homely | Brooklyn, NY</title>
 </head>
 <body>
 
-    <header id="header">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header id="header" role="banner">
         <div class="nav-contenedor">
-            <a href="index.html" class="logo">⌂ homely</a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="contact.html" class="activo">Contact</a></li>
-            </ul>
+            <a href="index.html" class="logo" aria-label="Homely – Go to homepage">⌂ homely</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" aria-current="page">About</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
             <a href="contact.html" class="boton-verde">Schedule Visit</a>
-            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-links">☰</button>
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">☰</button>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
 
-        <section class="hero-pagina">
-            <div class="hero-pagina-fondo" style="background-image: url('assets/images/hero.png'); background-size: cover; background-position: center;"></div>
+        <section class="hero-pagina" aria-label="Page header">
+            <div class="hero-pagina-fondo" style="background-image: url('assets/images/hero.png'); background-size: cover; background-position: center;" role="img" aria-label="Exterior view of the property"></div>
             <div class="hero-pagina-contenido">
                 <h1>About</h1>
-                <nav>
-                    <a href="index.html">Home</a> › About
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li aria-current="page">About</li>
+                    </ol>
                 </nav>
             </div>
         </section>
 
-        <section class="seccion-about" aria-label="Sobre la propiedad">
+        <section class="seccion-about" aria-labelledby="about-prop-heading">
+            <h2 id="about-prop-heading" class="sr-only">Property Overview</h2>
             <p>This exceptional residence offers refined living with generous open spaces, bright interiors, and a warm modern design that blends comfort with style. Every room is crafted to create a welcoming atmosphere, giving you the perfect setting for daily life, relaxation, and memorable moments.</p>
-            <ul class="about-stats" aria-label="Características de la propiedad">
+            <ul class="about-stats" aria-label="Property characteristics">
                 <li>
-                    <svg viewBox="0 0 40 40" fill="none" stroke="#8aad6e" stroke-width="1.5" width="36" height="36"><rect x="6" y="10" width="28" height="22" rx="2"/><line x1="6" y1="16" x2="34" y2="16"/><line x1="14" y1="10" x2="14" y2="7"/><line x1="26" y1="10" x2="26" y2="7"/></svg>
+                    <svg viewBox="0 0 40 40" fill="none" stroke="#8aad6e" stroke-width="1.5" width="36" height="36" aria-hidden="true" focusable="false"><rect x="6" y="10" width="28" height="22" rx="2"/><line x1="6" y1="16" x2="34" y2="16"/><line x1="14" y1="10" x2="14" y2="7"/><line x1="26" y1="10" x2="26" y2="7"/></svg>
                     <span class="stat-label">Year of Build</span>
                     <span class="stat-valor">2019</span>
                 </li>
                 <li>
-                    <svg viewBox="0 0 40 40" fill="none" stroke="#8aad6e" stroke-width="1.5" width="36" height="36"><polyline points="8,32 8,8 32,8 32,32"/><line x1="4" y1="32" x2="36" y2="32"/><line x1="14" y1="32" x2="14" y2="20"/><line x1="26" y1="32" x2="26" y2="20"/></svg>
+                    <svg viewBox="0 0 40 40" fill="none" stroke="#8aad6e" stroke-width="1.5" width="36" height="36" aria-hidden="true" focusable="false"><polyline points="8,32 8,8 32,8 32,32"/><line x1="4" y1="32" x2="36" y2="32"/><line x1="14" y1="32" x2="14" y2="20"/><line x1="26" y1="32" x2="26" y2="20"/></svg>
                     <span class="stat-label">Square Feet</span>
                     <span class="stat-valor">1665 sqft</span>
                 </li>
                 <li>
-                    <svg viewBox="0 0 40 40" fill="none" stroke="#8aad6e" stroke-width="1.5" width="36" height="36"><rect x="5" y="16" width="30" height="14" rx="2"/><path d="M5 22 Q12 14 20 16 Q28 18 35 22"/><line x1="5" y1="30" x2="5" y2="34"/><line x1="35" y1="30" x2="35" y2="34"/></svg>
+                    <svg viewBox="0 0 40 40" fill="none" stroke="#8aad6e" stroke-width="1.5" width="36" height="36" aria-hidden="true" focusable="false"><rect x="5" y="16" width="30" height="14" rx="2"/><path d="M5 22 Q12 14 20 16 Q28 18 35 22"/><line x1="5" y1="30" x2="5" y2="34"/><line x1="35" y1="30" x2="35" y2="34"/></svg>
                     <span class="stat-label">Bedrooms</span>
                     <span class="stat-valor">4</span>
                 </li>
                 <li>
-                    <svg viewBox="0 0 40 40" fill="none" stroke="#8aad6e" stroke-width="1.5" width="36" height="36"><path d="M10 20 Q10 10 18 10 L18 20"/><rect x="8" y="20" width="24" height="10" rx="2"/><line x1="16" y1="30" x2="14" y2="35"/><line x1="24" y1="30" x2="26" y2="35"/><line x1="8" y1="25" x2="32" y2="25"/></svg>
+                    <svg viewBox="0 0 40 40" fill="none" stroke="#8aad6e" stroke-width="1.5" width="36" height="36" aria-hidden="true" focusable="false"><path d="M10 20 Q10 10 18 10 L18 20"/><rect x="8" y="20" width="24" height="10" rx="2"/><line x1="16" y1="30" x2="14" y2="35"/><line x1="24" y1="30" x2="26" y2="35"/><line x1="8" y1="25" x2="32" y2="25"/></svg>
                     <span class="stat-label">Bathrooms</span>
                     <span class="stat-valor">5</span>
                 </li>
                 <li>
-                    <svg viewBox="0 0 40 40" fill="none" stroke="#8aad6e" stroke-width="1.5" width="36" height="36"><rect x="4" y="18" width="28" height="14" rx="3"/><path d="M4 22 L8 14 L28 14 L32 22"/><circle cx="11" cy="32" r="3"/><circle cx="25" cy="32" r="3"/><rect x="30" y="20" width="6" height="8" rx="1"/></svg>
+                    <svg viewBox="0 0 40 40" fill="none" stroke="#8aad6e" stroke-width="1.5" width="36" height="36" aria-hidden="true" focusable="false"><rect x="4" y="18" width="28" height="14" rx="3"/><path d="M4 22 L8 14 L28 14 L32 22"/><circle cx="11" cy="32" r="3"/><circle cx="25" cy="32" r="3"/><rect x="30" y="20" width="6" height="8" rx="1"/></svg>
                     <span class="stat-label">Car Parking</span>
                     <span class="stat-valor">3</span>
                 </li>
                 <li>
-                    <svg viewBox="0 0 40 40" fill="none" stroke="#8aad6e" stroke-width="1.5" width="36" height="36"><path d="M20 8 L24 16 L33 17 L27 23 L28 32 L20 28 L12 32 L13 23 L7 17 L16 16 Z"/></svg>
+                    <svg viewBox="0 0 40 40" fill="none" stroke="#8aad6e" stroke-width="1.5" width="36" height="36" aria-hidden="true" focusable="false"><path d="M20 8 L24 16 L33 17 L27 23 L28 32 L20 28 L12 32 L13 23 L7 17 L16 16 Z"/></svg>
                     <span class="stat-label">Price</span>
                     <span class="stat-valor">$250,000</span>
                 </li>
             </ul>
         </section>
 
-        <section class="seccion-planos" aria-label="Planos de la propiedad">
+        <section class="seccion-planos" aria-labelledby="floorplan-heading">
             <div class="planos-inner">
                 <div>
-                    <p style="color: rgba(255,255,255,0.5); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:6px;">Discover</p>
-                    <h2 style="color:white; font-size:32px;">Home Floorplans</h2>
-                    <ul class="planos-lista" aria-label="Distribución de habitaciones">
+                    <p style="color: rgba(255,255,255,0.5); font-size:11px; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:6px;" aria-hidden="true">Discover</p>
+                    <h2 id="floorplan-heading" style="color:white; font-size:32px;">Home Floorplans</h2>
+                    <ul class="planos-lista" aria-label="Room distribution">
                         <li><span>Living Room</span><span>20 m²</span></li>
                         <li><span>Dining Room</span><span>15 m²</span></li>
                         <li><span>Kitchen</span><span>15 m²</span></li>
@@ -94,29 +101,29 @@
                     </ul>
                 </div>
                 <div class="planos-derecha">
-                    <div class="plano-imagen" role="img" aria-label="Plano de la planta principal"></div>
+                    <div class="plano-imagen" role="img" aria-label="Floor plan of the main level"></div>
                 </div>
             </div>
         </section>
 
-        <section class="seccion-facilities" aria-label="Instalaciones de la propiedad">
+        <section class="seccion-facilities" aria-labelledby="facilities-heading">
             <div class="facilities-cabecera">
                 <div>
                     <p class="label-verde">Home Facilities</p>
-                    <h2>Facilities For Lifestyle</h2>
+                    <h2 id="facilities-heading">Facilities For Lifestyle</h2>
                 </div>
                 <a href="#" class="boton-outline2">View More</a>
             </div>
             <div class="facilities-grid">
                 <article class="fac-caja fac-ancha">
-                    <div class="fac-imagen" role="img" aria-label="Smart Home" style="background-image: url('assets/images/smart-home.png'); background-size: cover; background-position: center;"></div>
+                    <div class="fac-imagen" role="img" aria-label="Smart Home control interface" style="background-image: url('assets/images/smart-home.png'); background-size: cover; background-position: center;"></div>
                     <div>
                         <h3>Smart Home</h3>
                         <p>Control your home with intuitive smart features that connect your family to comfort and modern living.</p>
                     </div>
                 </article>
                 <article class="fac-caja fac-ancha">
-                    <div class="fac-imagen" role="img" aria-label="Solar Powered" style="background-image: url('assets/images/solar.png'); background-size: cover; background-position: center;"></div>
+                    <div class="fac-imagen" role="img" aria-label="Solar panels on the roof" style="background-image: url('assets/images/solar.png'); background-size: cover; background-position: center;"></div>
                     <div>
                         <h3>Solar Powered</h3>
                         <p>Generate clean renewable energy with efficient solar systems designed to lower utility costs.</p>
@@ -127,30 +134,30 @@
                         <h3>Swimming Pool</h3>
                         <p>A beautifully designed pool that offers a relaxing, peaceful ambiance.</p>
                     </div>
-                    <div class="fac-imagen" role="img" aria-label="Swimming Pool" style="background-image: url('assets/images/piscina.png'); background-size: cover; background-position: center;"></div>
+                    <div class="fac-imagen" role="img" aria-label="Outdoor swimming pool with garden" style="background-image: url('assets/images/piscina.png'); background-size: cover; background-position: center;"></div>
                 </article>
                 <article class="fac-caja fac-ancha fac-invertida">
                     <div>
                         <h3>Home Security</h3>
                         <p>Protect your home with advanced security features that offer continuous monitoring.</p>
                     </div>
-                    <div class="fac-imagen" role="img" aria-label="Home Security" style="background-image: url('assets/images/seguridad.png'); background-size: cover; background-position: center;"></div>
+                    <div class="fac-imagen" role="img" aria-label="Smart security camera" style="background-image: url('assets/images/seguridad.png'); background-size: cover; background-position: center;"></div>
                 </article>
             </div>
         </section>
 
-        <section class="seccion-localizacion" aria-label="Puntos de interés cercanos">
+        <section class="seccion-localizacion" aria-labelledby="location-heading">
             <div class="localizacion-inner">
-                <p style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#6b7a6e; margin-bottom:6px;">Location Highlights</p>
-                <h2>Everything You Need, All Around You</h2>
-                <div class="loc-tabs" role="list" aria-label="Categorías de lugares cercanos">
-                    <div class="loc-tab loc-tab-activo" role="listitem">Grocery</div>
-                    <div class="loc-tab" role="listitem">Transportation</div>
-                    <div class="loc-tab" role="listitem">Education</div>
-                    <div class="loc-tab" role="listitem">Recreation</div>
-                    <div class="loc-tab" role="listitem">Other</div>
+                <p style="font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#6b7a6e; margin-bottom:6px;" aria-hidden="true">Location Highlights</p>
+                <h2 id="location-heading">Everything You Need, All Around You</h2>
+                <div class="loc-tabs" role="tablist" aria-label="Nearby place categories">
+                    <button class="loc-tab loc-tab-activo" role="tab" aria-selected="true">Grocery</button>
+                    <button class="loc-tab" role="tab" aria-selected="false">Transportation</button>
+                    <button class="loc-tab" role="tab" aria-selected="false">Education</button>
+                    <button class="loc-tab" role="tab" aria-selected="false">Recreation</button>
+                    <button class="loc-tab" role="tab" aria-selected="false">Other</button>
                 </div>
-                <div class="loc-cajas">
+                <div class="loc-cajas" role="tabpanel">
                     <article class="loc-caja">
                         <span style="font-size:24px;" aria-hidden="true">🛒</span>
                         <div>
@@ -178,47 +185,38 @@
                 </div>
             </div>
         </section>
-
-        <div class="ticker-wrap" aria-hidden="true">
-            <div class="ticker">
-                <span>Elegant Urban Residence</span>
-                <span>Serene Garden Outlook</span>
-                <span>Modern Living Spaces</span>
-                <span>Premium Facilities</span>
-                <span>Smart Home Ready</span>
-                <span>Elegant Urban Residence</span>
-                <span>Serene Garden Outlook</span>
-                <span>Modern Living Spaces</span>
-            </div>
-        </div>
-
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-grid">
             <div style="text-align:center;">
-                <h4>Address</h4>
-                <p>742 Evergreen Terrace<br>Brooklyn, NY 11201</p>
+                <h2 class="footer-heading">Address</h2>
+                <address>742 Evergreen Terrace<br>Brooklyn, NY 11201</address>
             </div>
             <div style="text-align:center;">
-                <a href="index.html" class="logo" style="color:white;" aria-label="Homely - Ir a inicio">⌂ homely</a>
-                <div class="footer-social">
-                    <a href="#" aria-label="Facebook">f</a>
-                    <a href="#" aria-label="Instagram">ig</a>
-                    <a href="#" aria-label="Twitter">tw</a>
-                    <a href="#" aria-label="YouTube">yt</a>
-                </div>
+                <a href="index.html" class="logo" style="color:white;" aria-label="Homely – Go to homepage">⌂ homely</a>
+                <nav aria-label="Social media links">
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">ig</a>
+                        <a href="#" aria-label="Twitter / X">tw</a>
+                        <a href="#" aria-label="YouTube">yt</a>
+                    </div>
+                </nav>
             </div>
             <div style="text-align:center;">
-                <h4>Contact Us</h4>
-                <p>T. (+1) 234-5678</p>
-                <p>M. contact@homely.com</p>
+                <h2 class="footer-heading">Contact Us</h2>
+                <address>
+                    <p>T. (+1) 234-5678</p>
+                    <p>M. <a href="mailto:contact@homely.com" style="color:inherit;">contact@homely.com</a></p>
+                </address>
             </div>
         </div>
         <div class="footer-inferior">
-            <p>Copyright 2026 - Homely by Designesia</p>
+            <p><small>Copyright &copy; 2026 – Homely by Designesia</small></p>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
