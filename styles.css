@@ -831,6 +831,7 @@ footer {
     right: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
     padding: 40px 16px 16px 16px;
+    color: white;
 }
 
 .news-overlay h2 {

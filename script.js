@@ -1,19 +1,29 @@
 var hamburger = document.getElementById('hamburger');
 var navLinks = document.getElementById('nav-links');
 
-hamburger.addEventListener('click', function () {
-    var estaAbierto = navLinks.classList.contains('abierto');
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function () {
+        var estaAbierto = navLinks.classList.contains('abierto');
 
-    if (estaAbierto) {
-        navLinks.classList.remove('abierto');
-        hamburger.setAttribute('aria-expanded', 'false');
-        hamburger.setAttribute('aria-label', 'Abrir menú de navegación');
-    } else {
-        navLinks.classList.add('abierto');
-        hamburger.setAttribute('aria-expanded', 'true');
-        hamburger.setAttribute('aria-label', 'Cerrar menú de navegación');
-    }
-});
+        if (estaAbierto) {
+            navLinks.classList.remove('abierto');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.setAttribute('aria-label', 'Open navigation menu');
+        } else {
+            navLinks.classList.add('abierto');
+            hamburger.setAttribute('aria-expanded', 'true');
+            hamburger.setAttribute('aria-label', 'Close navigation menu');
+        }
+    });
+
+    navLinks.querySelectorAll('a').forEach(function (enlace) {
+        enlace.addEventListener('click', function () {
+            navLinks.classList.remove('abierto');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.setAttribute('aria-label', 'Open navigation menu');
+        });
+    });
+}
 
 var header = document.getElementById('header');
 
@@ -57,13 +67,18 @@ if (formulario) {
         errorNombre.textContent = '';
         errorEmail.textContent = '';
         errorFecha.textContent = '';
+        exitoMsg.textContent = '';
         nombre.classList.remove('input-error');
         email.classList.remove('input-error');
         fecha.classList.remove('input-error');
+        nombre.removeAttribute('aria-invalid');
+        email.removeAttribute('aria-invalid');
+        fecha.removeAttribute('aria-invalid');
 
         if (nombre.value.trim().length < 2) {
             errorNombre.textContent = 'Please enter your name (at least 2 characters).';
             nombre.classList.add('input-error');
+            nombre.setAttribute('aria-invalid', 'true');
             hayErrores = true;
         }
 
@@ -71,12 +86,14 @@ if (formulario) {
         if (!regexEmail.test(email.value.trim())) {
             errorEmail.textContent = 'Please enter a valid email address.';
             email.classList.add('input-error');
+            email.setAttribute('aria-invalid', 'true');
             hayErrores = true;
         }
 
         if (!fecha.value) {
             errorFecha.textContent = 'Please select a preferred date.';
             fecha.classList.add('input-error');
+            fecha.setAttribute('aria-invalid', 'true');
             hayErrores = true;
         }
 
@@ -84,32 +101,44 @@ if (formulario) {
             exitoMsg.textContent = '✓ Your request has been sent. We will contact you soon.';
             exitoMsg.style.color = 'green';
             formulario.reset();
+        } else {
+            if (nombre.classList.contains('input-error')) {
+                nombre.focus();
+            } else if (email.classList.contains('input-error')) {
+                email.focus();
+            } else if (fecha.classList.contains('input-error')) {
+                fecha.focus();
+            }
         }
     });
 }
 
 var galeriaTrack = document.getElementById('galeria-track');
- 
+
 if (galeriaTrack) {
     var posicionActual = 0;
     var items = document.querySelectorAll('.galeria-item');
     var totalItems = items.length;
-    var anchoItem = items[0].offsetWidth + 16; // ancho del item + gap
- 
+    var anchoItem = items[0].offsetWidth + 16;
+
     var btnAnterior = document.getElementById('btn-anterior');
     var btnSiguiente = document.getElementById('btn-siguiente');
- 
-    btnSiguiente.addEventListener('click', function () {
-        if (posicionActual < totalItems - 3) {
-            posicionActual++;
-            galeriaTrack.style.transform = 'translateX(-' + (posicionActual * anchoItem) + 'px)';
-        }
-    });
- 
-    btnAnterior.addEventListener('click', function () {
-        if (posicionActual > 0) {
-            posicionActual--;
-            galeriaTrack.style.transform = 'translateX(-' + (posicionActual * anchoItem) + 'px)';
-        }
-    });
+
+    if (btnSiguiente) {
+        btnSiguiente.addEventListener('click', function () {
+            if (posicionActual < totalItems - 3) {
+                posicionActual++;
+                galeriaTrack.style.transform = 'translateX(-' + (posicionActual * anchoItem) + 'px)';
+            }
+        });
+    }
+
+    if (btnAnterior) {
+        btnAnterior.addEventListener('click', function () {
+            if (posicionActual > 0) {
+                posicionActual--;
+                galeriaTrack.style.transform = 'translateX(-' + (posicionActual * anchoItem) + 'px)';
+            }
+        });
+    }
 }

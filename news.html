@@ -1,154 +1,169 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Homely - News">
+    <meta name="description" content="Homely – News and home care tips. Practical advice to keep your home organized and well maintained.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Homely - News</title>
+    <title>News – Homely | Brooklyn, NY</title>
 </head>
 <body>
 
-    <header id="header">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header id="header" role="banner">
         <div class="nav-contenedor">
-            <a href="index.html" class="logo">⌂ homely</a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="contact.html" class="activo">Contact</a></li>
-            </ul>
+            <a href="index.html" class="logo" aria-label="Homely – Go to homepage">⌂ homely</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="news.html" aria-current="page">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
             <a href="contact.html" class="boton-verde">Schedule Visit</a>
-            <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-links">☰</button>
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">☰</button>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
 
-       <section class="hero-pagina">
-            <div class="hero-pagina-fondo" style="background-image: url('assets/images/hero.png'); background-size: cover; background-position: center;"></div>
+       <section class="hero-pagina" aria-label="Page header">
+            <div class="hero-pagina-fondo" style="background-image: url('assets/images/hero.png'); background-size: cover; background-position: center;" role="img" aria-label="Exterior view of the property"></div>
             <div class="hero-pagina-contenido">
                 <h1>News</h1>
-                <nav>
-                    <a href="index.html">Home</a> › News
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li aria-current="page">News</li>
+                    </ol>
                 </nav>
             </div>
         </section>
 
-        <section class="seccion-news" aria-label="Artículos de noticias">
+        <section class="seccion-news" aria-labelledby="news-heading">
+            <h2 id="news-heading" class="sr-only">News articles</h2>
             <div class="news-grid">
 
                 <article class="news-caja">
-                    <div class="news-imagen" role="img" aria-label="Habitación organizada con estanterías" style="background-image: url('assets/images/living-room.png'); background-size: cover; background-position: center;">
-                        <div class="news-fecha">
+                    <div class="news-imagen" role="img" aria-label="Organized room with shelving units" style="background-image: url('assets/images/living-room.png'); background-size: cover; background-position: center;">
+                        <div class="news-fecha" aria-label="Published December 20">
                             <span class="news-dia">20</span>
                             <span class="news-mes">Dec</span>
                         </div>
                         <div class="news-overlay">
-                            <h2>Simple Daily Home Care Tips to Keep Your Space Organized</h2>
+                            <h3>Simple Daily Home Care Tips to Keep Your Space Organized</h3>
                         </div>
                     </div>
                 </article>
 
                 <article class="news-caja">
-                    <div class="news-imagen" role="img" aria-label="Persona limpiando el hogar" style="background-image: url('assets/images/master.png'); background-size: cover; background-position: center;">
-                        <div class="news-fecha">
+                    <div class="news-imagen" role="img" aria-label="Person cleaning the home" style="background-image: url('assets/images/master.png'); background-size: cover; background-position: center;">
+                        <div class="news-fecha" aria-label="Published December 19">
                             <span class="news-dia">19</span>
                             <span class="news-mes">Dec</span>
                         </div>
                         <div class="news-overlay">
-                            <h2>How to Maintain a Clean Home With Minimal Daily Effort</h2>
+                            <h3>How to Maintain a Clean Home With Minimal Daily Effort</h3>
                         </div>
                     </div>
                 </article>
 
                 <article class="news-caja">
-                    <div class="news-imagen" role="img" aria-label="Persona con guantes de limpieza" style="background-image: url('assets/images/bathroom.png'); background-size: cover; background-position: center;">
-                        <div class="news-fecha">
+                    <div class="news-imagen" role="img" aria-label="Person wearing cleaning gloves" style="background-image: url('assets/images/bathroom.png'); background-size: cover; background-position: center;">
+                        <div class="news-fecha" aria-label="Published December 18">
                             <span class="news-dia">18</span>
                             <span class="news-mes">Dec</span>
                         </div>
                         <div class="news-overlay">
-                            <h2>Essential Home Care Habits for a Healthier Living Environment</h2>
+                            <h3>Essential Home Care Habits for a Healthier Living Environment</h3>
                         </div>
                     </div>
                 </article>
 
                 <article class="news-caja">
-                    <div class="news-imagen" role="img" aria-label="Sala minimalista con mesa y silla" style="background-image: url('assets/images/piscina.png'); background-size: cover; background-position: center;">
-                        <div class="news-fecha">
+                    <div class="news-imagen" role="img" aria-label="Minimalist room with table and chair" style="background-image: url('assets/images/piscina.png'); background-size: cover; background-position: center;">
+                        <div class="news-fecha" aria-label="Published December 17">
                             <span class="news-dia">17</span>
                             <span class="news-mes">Dec</span>
                         </div>
                         <div class="news-overlay">
-                            <h2>Quick Cleaning Hacks to Make Your Home Look Spotless Instantly</h2>
+                            <h3>Quick Cleaning Hacks to Make Your Home Look Spotless Instantly</h3>
                         </div>
                     </div>
                 </article>
 
                 <article class="news-caja">
-                    <div class="news-imagen" role="img" aria-label="Persona feliz en el sofá con auriculares" style="background-image: url('assets/images/smart-home.png'); background-size: cover; background-position: center;">
-                        <div class="news-fecha">
+                    <div class="news-imagen" role="img" aria-label="Person relaxing on sofa with headphones" style="background-image: url('assets/images/smart-home.png'); background-size: cover; background-position: center;">
+                        <div class="news-fecha" aria-label="Published December 16">
                             <span class="news-dia">16</span>
                             <span class="news-mes">Dec</span>
                         </div>
                         <div class="news-overlay">
-                            <h2>Home Care Checklist: Weekly Tasks to Keep Your Home in Top Shape</h2>
+                            <h3>Home Care Checklist: Weekly Tasks to Keep Your Home in Top Shape</h3>
                         </div>
                     </div>
                 </article>
 
                 <article class="news-caja">
-                    <div class="news-imagen" role="img" aria-label="Salón acogedor con sofá y cojines" style="background-image: url('assets/images/seguridad.png'); background-size: cover; background-position: center;">
-                        <div class="news-fecha">
+                    <div class="news-imagen" role="img" aria-label="Cosy living room with sofa and cushions" style="background-image: url('assets/images/seguridad.png'); background-size: cover; background-position: center;">
+                        <div class="news-fecha" aria-label="Published December 15">
                             <span class="news-dia">15</span>
                             <span class="news-mes">Dec</span>
                         </div>
                         <div class="news-overlay">
-                            <h2>Smart Ways to Reduce Clutter and Create a Calm Home Atmosphere</h2>
+                            <h3>Smart Ways to Reduce Clutter and Create a Calm Home Atmosphere</h3>
                         </div>
                     </div>
                 </article>
             </div>
 
-            <div class="news-paginacion" aria-label="Paginación">
-                <button class="pag-btn" aria-label="Página anterior">‹</button>
-                <button class="pag-num">1</button>
-                <button class="pag-num pag-activo" aria-current="page">2</button>
-                <button class="pag-num">3</button>
-                <button class="pag-btn" aria-label="Página siguiente">›</button>
-            </div>
+            <nav class="news-paginacion" aria-label="News pagination">
+                <button class="pag-btn" aria-label="Previous page" type="button">‹</button>
+                <button class="pag-num" type="button" aria-label="Page 1">1</button>
+                <button class="pag-num pag-activo" type="button" aria-current="page" aria-label="Page 2, current">2</button>
+                <button class="pag-num" type="button" aria-label="Page 3">3</button>
+                <button class="pag-btn" aria-label="Next page" type="button">›</button>
+            </nav>
 
         </section>
 
     </main>
 
-<footer>
-    <div class="footer-grid">
-        <div style="text-align:center;">
-            <h4>Address</h4>
-            <p>742 Evergreen Terrace<br>Brooklyn, NY 11201</p>
-        </div>
-        <div style="text-align:center;">
-            <a href="index.html" class="logo" style="color:white;" aria-label="Homely - Ir a inicio">⌂ homely</a>
-            <div class="footer-social">
-                <a href="#" aria-label="Facebook">f</a>
-                <a href="#" aria-label="Instagram">ig</a>
-                <a href="#" aria-label="Twitter">tw</a>
-                <a href="#" aria-label="YouTube">yt</a>
+    <footer role="contentinfo">
+        <div class="footer-grid">
+            <div style="text-align:center;">
+                <h2 class="footer-heading">Address</h2>
+                <address>742 Evergreen Terrace<br>Brooklyn, NY 11201</address>
+            </div>
+            <div style="text-align:center;">
+                <a href="index.html" class="logo" style="color:white;" aria-label="Homely – Go to homepage">⌂ homely</a>
+                <nav aria-label="Social media links">
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">ig</a>
+                        <a href="#" aria-label="Twitter / X">tw</a>
+                        <a href="#" aria-label="YouTube">yt</a>
+                    </div>
+                </nav>
+            </div>
+            <div style="text-align:center;">
+                <h2 class="footer-heading">Contact Us</h2>
+                <address>
+                    <p>T. (+1) 234-5678</p>
+                    <p>M. <a href="mailto:contact@homely.com" style="color:inherit;">contact@homely.com</a></p>
+                </address>
             </div>
         </div>
-        <div style="text-align:center;">
-            <h4>Contact Us</h4>
-            <p>T. (+1) 234-5678</p>
-            <p>M. contact@homely.com</p>
+        <div class="footer-inferior">
+            <p><small>Copyright &copy; 2026 – Homely by Designesia</small></p>
         </div>
-    </div>
-    <div class="footer-inferior">
-        <p>Copyright 2026 - Homely by Designesia</p>
-    </div>
-</footer>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
